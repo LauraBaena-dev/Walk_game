@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'FrizQuadrata';
+  src:
+    url('@/assets/fonts/friz-quadrata-regular.ttf') format('ttf'),
+    url('@/assets/fonts/friz-quadrata-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FrizQuadrata';
+  src:
+    url('@/assets/fonts/friz-quadrata-bold-italic.ttf') format('ttf'),
+    url('@/assets/fonts/friz-quadrata-bold-italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+html body {
+  font-family: 'FrizQuadrata', Arial, sans-serif;
+  color: $color-beige;
+  font-size: $font-size-md;
+  background-color: rgba($color-bg, 0.9);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+
+  h1 {
+    color: $color-gold-regular;
+    font-size: $font-size-xl;
+    text-align: center;
+  }
+
+  .text-danger {
+    margin-top: $spacing-xs;
+    color: $color-red-border-regular;
+  }
+
+  button.custom-primary {
+    position: relative;
+    border: 1px solid $color-red-border-regular;
+    background-color: rgba($color-red-bg-regular, 0.8);
+    font-size: $font-size-md;
+    border-radius: 0px;
+    color: $color-gold-regular;
+    text-align: center;
+    line-height: normal;
+    text-transform: uppercase;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+    border-radius: 5px;
+    &.invert {
+      border-color: $color-gold-regular;
+      background-color: rgba($color-black, 0.8);
+    }
+    &:hover:not([disabled]) {
+      cursor: pointer;
+      border-color: $color-red-border-hover;
+      color: $color-gold-hover;
+      background-color: $color-red-bg-hover;
+      &.invert {
+        border-color: $color-gold-hover;
+        background-color: $color-gold-hover-opacity;
+      }
+    }
+  }
+
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  .modal {
+    .modal-content {
+      background-color: rgba($color-bg, 0.9);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .modal-header {
+      border: none;
+      padding: $spacing-light;
+      .btn-close {
+        filter: invert(100%);
+      }
+    }
+    .modal-body {
+      padding: $spacing-light;
+      padding-top: 0px;
+      text-align: center;
+    }
+    &.modal-info-player {
+      .modal-sm {
+        max-width: 300px;
+        margin: auto;
+        margin-top: $spacing-light;
+      }
+      .modal-header {
+        position: absolute;
+        right: 0px;
+        z-index: 1;
+        .btn-close {
+          filter: invert(100%);
+          opacity: 1;
+        }
+      }
+      .modal-body {
+        text-align: start;
+        padding: 0px;
+      }
+    }
+    @media (min-width: 768px) {
+      .modal-header {
+        padding: $spacing-regular;
+      }
+      .modal-body {
+        padding: $spacing-regular;
+        padding-top: 0px;
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $color-bg;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $color-gold-regular;
+    border-radius: 5px;
+  }
+
+  @media (min-width: 768px) {
+    button.custom-primary {
+      padding: $spacing-xs $spacing-sm;
+    }
+    h1 {
+      font-size: $font-size-xxl;
+    }
+  }
+}
