@@ -3,7 +3,7 @@
 ## Descripción
 
 Este proyecto es un pequeño frontent diseñado para la prueba técnica de Evicertia/Namirial.
-Se ha realizado con vue 3, bootstrap 5 y scss para los estilos, vi test y jest para los tests, y prettier para el formateo del código.
+Se ha realizado con vue 3, bootstrap 5 y scss para los estilos, vi test para los tests, y prettier para el formateo del código.
 
 ### Versiones
 
