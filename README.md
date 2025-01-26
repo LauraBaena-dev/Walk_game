@@ -10,6 +10,7 @@ Se ha realizado con vue 3, bootstrap 5 y scss para los estilos, vi test y jest p
 ```
 node v18.16.0
 npm v9.5.1
+Con superiores debería funcionar
 ```
 
 ### Comandos
